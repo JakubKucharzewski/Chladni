@@ -69,7 +69,7 @@ public class ChladniFormula : MonoBehaviour
     private Dictionary<Vector2Int, GameObject> spawnedUIItems = new Dictionary<Vector2Int, GameObject>();
 
     private int pendingN = 0;
-    private int pendingM = 0;
+    private int pendingM = 1;
 
     private float[,] A_coeff = new float[5, 5];
     private float[,] B_coeff = new float[5, 5];
@@ -302,7 +302,7 @@ public class ChladniFormula : MonoBehaviour
             Text itemText = newItem.GetComponentInChildren<Text>();
             if (itemText != null)
             {
-                itemText.text = $"n: {newMode.x}, m: {newMode.y}";
+                itemText.text = $"   n: {newMode.x}, m: {newMode.y}";
             }
 
             // Assign removal method to the instantiated button
